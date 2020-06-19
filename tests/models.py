@@ -1,7 +1,7 @@
 from __future__ import unicode_literals
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
-from rest_framework import serializers
+from harps_serializers import serializers
 
 
 def foobar():
@@ -34,7 +34,11 @@ class Anchor(RESTFrameworkModel):
 
 
 class BasicModel(RESTFrameworkModel):
-    text = models.CharField(max_length=100, verbose_name=_("Text comes here"), help_text=_("Text description."))
+    text = models.CharField(
+        max_length=100,
+        verbose_name=tr('Text comes here'),
+        help_text=tr('Text description.')
+    )
 
 
 class SlugBasedModel(RESTFrameworkModel):

@@ -26,6 +26,9 @@ class NestedHyperlinkedModelSerializer(rest_framework.serializers.HyperlinkedMod
 
     def __init__(self, *args, **kwargs):
         self.parent_lookup_kwargs = kwargs.pop('parent_lookup_kwargs', self.parent_lookup_kwargs)
+#         suffix = kwargs.pop('suffix', None)
+#         suffix = kwargs.pop('basename', None)
+#         suffix = kwargs.pop('detail', None)
         super(NestedHyperlinkedModelSerializer, self).__init__(*args, **kwargs)
 
     def build_url_field(self, field_name, model_class):

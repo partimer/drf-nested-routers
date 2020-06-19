@@ -1,5 +1,5 @@
 from django.db import models
-from rest_framework import serializers, viewsets
+from harps_serializers import serializers, viewsets
 from rest_framework_nested import serializers as nested_serializers
 from rest_framework_nested import relations
 
